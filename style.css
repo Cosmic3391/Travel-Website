@@ -1,0 +1,862 @@
+/* General Styles */
+body, html {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #333;
+  margin: 20px 0;
+}
+
+p {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Main content grows to fill the remaining space */
+main {
+  flex: 1;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #f1f8f6;
+  padding: 50px 20px;
+  margin: 10px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-top: 10px;
+}
+
+/* Image Collage */
+.image-collage {
+  text-align: center;
+  padding: 20px;
+}
+
+.collage {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin: 20px;
+}
+
+.collage img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.collage img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+/* Team Section */
+.team-section {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.team-img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+  border: 4px solid #00695c;
+  border-radius: 50%;
+}
+
+.team-section h4 {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.team-section p {
+  color: #777;
+  font-size: 16px;
+}
+
+/* Contact Section */
+.contact-page .contact-intro {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.contact-page .contact-intro h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00695c;
+}
+
+.contact-page .contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-page .contact-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.contact-page .contact-form h3 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #00695c;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.contact-page .contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-page .contact-form .form-group label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contact-page .contact-form .form-group input,
+.contact-page .contact-form .form-group textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  font-size: 1rem;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.contact-page .contact-form .form-group input:focus,
+.contact-page .contact-form .form-group textarea:focus {
+  border-color: #00695c;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 105, 92, 0.3);
+  outline: none;
+}
+
+.contact-page .contact-form .form-group textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.contact-page .contact-form button {
+  width: 100%;
+  padding: 15px;
+  background-color: #00695c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-page .contact-form button:hover {
+  background-color: #004d40;
+}
+
+/* Form Input Hover Effects */
+.contact-page .contact-form .form-group input:hover,
+.contact-page .contact-form .form-group textarea:hover {
+  background-color: #fff;
+  border-color: #004d40;
+}
+
+/* Success Message */
+.contact-page .success-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #28a745;
+  margin-top: 20px;
+}
+
+/* Error Message */
+.contact-page .error-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #dc3545;
+  margin-top: 20px;
+}
+
+/* Pricing Section */
+.pricing-cards {
+  margin: 40px 0;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+  margin-bottom: 20px;
+  transition: transform 0.3s, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+  background-color: #00695c;
+  color: white;
+  padding: 20px;
+  border-radius: 5px 5px 0 0;
+}
+
+.card-header .price {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-body ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card-body ul li {
+  margin: 10px 0;
+  color: #555;
+}
+
+.btn-primary {
+  background-color: #00695c;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #004d40;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #6f9196;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -ms-transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #00695c;
+}
+/* Hero Section - Nature Theme */
+.hero {
+  background: url('./images/7.jpg') no-repeat center center/cover; /* Replace with your nature-themed image */
+  padding: 80px 20px;
+  color: white;
+  text-align: center;
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+  animation: fadeIn 2s ease-out;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-top: 15px;
+  color: #f0f0f0;
+  line-height: 1.6;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 2s 0.5s ease-out;
+}
+
+.hero button {
+  background-color: rgba(0, 105, 92, 0.8); /* Dark teal with transparency */
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.25rem;
+  border-radius: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+  background-color: #004d40;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: Add Nature-themed Accent Colors */
+.nature-accent {
+  color: #00695c; /* Natural green */
+}
+
+.nature-accent:hover {
+  color: #004d40; /* Darker green */
+}
+/* About Us Section Styling */
+.about-intro {
+  padding: 50px 20px;
+  background-image: url('./images/9.jpg'); /* Nature background */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.about-intro h2 {
+  font-size: 3rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+}
+
+.about-intro p {
+  font-size: 1.25rem;
+  font-family: 'Arial', sans-serif;
+  color: #ffffff;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: Add a gradient overlay for better text readability */
+.about-intro::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  border-radius: 15px;
+}
+
+/* Ensuring the text is above the overlay */
+.about-intro h2,
+.about-intro p {
+  position: relative;
+  z-index: 2;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .about-intro {
+    padding: 40px 15px;
+  }
+
+  .about-intro h2 {
+    font-size: 2rem;
+  }
+
+  .about-intro p {
+    font-size: 1rem;
+  }
+}
+/* About Details Section Styling */
+.about-details {
+  background-color: #f8f9fa;
+  padding: 50px 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-details h3 {
+  font-size: 2rem;
+  color: #00695c;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.about-details .section-title {
+  font-size: 2rem;
+  color: #00695c;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.about-details .section-text {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.about-details .section-list {
+  list-style-type: circle;
+  padding-left: 25px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.about-details .section-list li {
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+/* Image Styling */
+.about-details img {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-details {
+    padding: 30px 10px;
+  }
+
+  .about-details .section-title {
+    font-size: 1.5rem;
+  }
+
+  .about-details .section-text {
+    font-size: 1rem;
+  }
+}
+/* Navbar Styling */
+.navbar {
+  padding: 1rem;
+  background-color: #00695c; /* Dark teal background */
+}
+
+/* Digital Clock Styling */
+.navbar .digital-clock {
+  font-size: 1.2rem;
+  font-family: 'Courier New', Courier, monospace;
+  color: white; /* Text color */
+  background-color: #004d40; /* Slightly darker teal to blend with the navbar */
+  padding: 5px 15px;
+  border-radius: 5px;
+  margin-left: auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for subtle depth */
+}
+/* Features Header Section */
+.features-header {
+  background-image: url("./images/LEH.jpg");
+  background-size: cover;
+  
+  border-radius: 20px;
+  
+}
+
+/* Features List Section */
+.features-list {
+  margin-top: 50px; 
+  margin-bottom: 50px;
+}
+
+/* Feature Card */
+.feature-card {
+  background-color: #D4F6FF;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.feature-card h3 {
+  margin-top: 15px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .feature-card h3 {
+      font-size: 1.2rem;
+  }
+
+  .feature-card p {
+      font-size: 0.9rem;
+  }
+}
+/* Pricing Header Section Styles */
+.pricing-header {
+  background-image: url('./images/12.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 80px 20px;
+  position: relative;
+  text-align: center;
+  margin: 10px;
+}
+
+.pricing-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay for better text contrast */
+  z-index: 1;
+}
+
+.pricing-header h2 {
+  font-family: 'Poppins', sans-serif; /* Example of a modern font */
+  font-size: 3rem; /* Larger font size */
+  font-weight: bold;
+  z-index: 2;
+}
+
+.pricing-header p.lead {
+  font-family: 'Roboto', sans-serif; /* Example of a clean font */
+  font-size: 1.2rem; /* Slightly larger text for readability */
+  z-index: 2;
+  color: white;
+}
+
+/* Optional: Apply a box shadow or border radius to the heading */
+.pricing-header h2,
+.pricing-header p.lead {
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6); /* Subtle text shadow for a 3D effect */
+}
+/* Payment Modal Styling */
+.modal-content {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: #fff;
+}
+
+.modal-header {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+}
+
+.modal-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.btn-close {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.modal-body {
+  padding-top: 15px;
+}
+
+/* Form Field Styling */
+.form-label {
+  font-size: 1rem;
+  color: #555;
+  font-weight: bold;
+}
+
+.form-select, .form-control {
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+}
+
+.form-select:focus, .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+input[type="date"], input[type="month"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+input[type="date"]:focus, input[type="month"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Payment Method Select */
+#payment-method {
+  background-color: #f7f7f7;
+}
+
+/* Button Styling */
+button[type="submit"] {
+  background-color: #28a745;
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  padding: 12px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  border: none;
+}
+
+button[type="submit"]:hover {
+  background-color: #218838;
+  cursor: pointer;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .modal-dialog {
+    max-width: 100%;
+    margin: 20px;
+  }
+
+  .modal-content {
+    padding: 15px;
+  }
+
+  .modal-title {
+    font-size: 1.25rem;
+  }
+
+  .form-label {
+    font-size: 0.9rem;
+  }
+
+  button[type="submit"] {
+    font-size: 1rem;
+  }
+}
+.pricing-page {
+  background-color: #e0ffe0; /* Light green */
+}
+.other-page {
+  background-color: #FBFBFB; /* Very light gray */
+}
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Main Content Layout */
+.main-content {
+  display: flex;
+  gap: 20px;
+}
+
+/* Booking Section */
+.booking-section {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tabs {
+  display: flex;
+  overflow-x: auto;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.tab {
+  flex: 1;
+  background-color: #f1f1f1;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.tab.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.trip-type label {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.form-row label {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.form-row input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.swap-btn {
+  font-size: 20px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.special-fare {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.fare-btn {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.fare-btn.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.search-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.search-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Offers Section */
+.offers-section {
+  flex: 1;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.offers-section h3 {
+  margin-bottom: 10px;
+  color: #007bff;
+  text-align: center;
+}
+
+.offer {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.offer h4 {
+  margin: 0;
+  color: #007bff;
+}
+
+.offer p {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
