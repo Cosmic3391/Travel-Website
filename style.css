@@ -1,0 +1,845 @@
+/* General Styles */
+body, html {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #333;
+  margin: 20px 0;
+}
+
+p {
+  color: #555;
+  font-size: 1rem;
+}
+
+.intro{
+  position: relative;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  margin: 20px auto;
+  text-align: center;
+  color: whitesmoke;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  border-radius: 17px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+/* Animation Keyframes */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+      opacity: 0;
+      transform: translateX(-100%);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* Title Animation */
+.about-text h2 {
+  font-size: 2.5rem;
+  color:white;
+  margin-bottom: 15px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Paragraph Animation */
+.about-text p {
+  font-size: 1.2rem;
+  color:white;
+  animation: slideIn 1.5s ease-in-out;
+}
+
+.hero{
+  position: relative;
+  padding: 20px;
+  margin: 20px 10px;
+  text-align: center;
+  color: whitesmoke;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  border-radius: 17px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  transition: background-image 1.5s ease-in-out;
+}
+.hero-text {
+  position: absolute;
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+  width: 600px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.5rem;
+}
+
+/* Team Section */
+.team-section {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+.team-img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+  border: 4px solid #00695c;
+  border-radius: 50%;
+}
+
+.team-section h4 {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.team-section p {
+  color: #777;
+  font-size: 16px;
+}
+
+/* Contact Section */
+.contact-page .contact-intro {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.contact-page .contact-intro h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00695c;
+}
+
+.contact-page .contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-page .contact-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.contact-page .contact-form h3 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #00695c;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.contact-page .contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-page .contact-form .form-group label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contact-page .contact-form .form-group input,
+.contact-page .contact-form .form-group textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  font-size: 1rem;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.contact-page .contact-form .form-group input:focus,
+.contact-page .contact-form .form-group textarea:focus {
+  border-color: #00695c;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 105, 92, 0.3);
+  outline: none;
+}
+
+.contact-page .contact-form .form-group textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.contact-page .contact-form button {
+  width: 100%;
+  padding: 15px;
+  background-color: #00695c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-page .contact-form button:hover {
+  background-color: #004d40;
+}
+
+/* Form Input Hover Effects */
+.contact-page .contact-form .form-group input:hover,
+.contact-page .contact-form .form-group textarea:hover {
+  background-color: #fff;
+  border-color: #004d40;
+}
+
+/* Success Message */
+.contact-page .success-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #28a745;
+  margin-top: 20px;
+}
+
+/* Error Message */
+.contact-page .error-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #dc3545;
+  margin-top: 20px;
+}
+
+/* Pricing Section */
+.pricing-cards {
+  margin: 40px 0;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+  margin-bottom: 20px;
+  transition: transform 0.3s, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+  background-color: #00695c;
+  color: white;
+  padding: 20px;
+  border-radius: 5px 5px 0 0;
+}
+
+.card-header .price {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-body ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card-body ul li {
+  margin: 10px 0;
+  color: #555;
+}
+
+.btn-primary {
+  background-color: #00695c;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #004d40;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #FFF7D1;
+  color: #8B5DFF;
+  text-align: center;
+  height: 50px;
+  padding-top: 5px;
+}
+/* General Styling */
+.search-body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f9fc;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Navigation Tabs */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ddd;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #555;
+  background-color: #f4f4f4;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab.active {
+  color: #0071c2;
+  border-bottom: 3px solid #0071c2;
+  background-color: #fff;
+}
+
+.tab:hover {
+  background-color: #e9f4fd;
+}
+
+/* Offers Section */
+.offers-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  
+  margin: auto 10px;
+}
+
+.offers-section h3 {
+  text-align: center;
+  color: white;
+  font-size: 22px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #0071c2;
+}
+
+.offer {
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.offer:hover {
+  transform: translateY(-5px);
+}
+
+.offer h4 {
+  font-size: 18px;
+  color: #ff6200;
+  margin-bottom: 10px;
+}
+
+.offer p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Modal Section Styles */
+.mainOffer .modal-content {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.unique-login-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+/* Left Section */
+.unique-login-left {
+  flex: 1; /* Take up half the modal width */
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url('./images/image6.jpg');
+}
+
+.unique-logo h1 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  
+}
+
+.unique-back-button {
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.unique-back-button:hover {
+  text-decoration: underline;
+}
+
+.unique-tagline h2 {
+  font-size: 1.5rem;
+  color: white;
+  line-height: 1.5;
+}
+
+/* Right Section */
+.unique-login-right {
+  flex: 1;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+}
+
+.unique-login-right h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.unique-login-right p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.unique-login-right p a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.unique-login-right p a:hover {
+  text-decoration: underline;
+}
+
+/* Form Styles */
+.unique-form-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.unique-form-group input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.unique-form-check {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.unique-form-check input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.unique-form-check label {
+  font-size: 0.9rem;
+}
+
+.unique-form-check label a {
+  color: #007bff;
+}
+
+.unique-btn-primary {
+  padding: 12px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.unique-btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Divider */
+.unique-divider {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 0.9rem;
+  color: #888;
+  position: relative;
+}
+
+.unique-divider::before,
+.unique-divider::after {
+  content: '';
+  display: block;
+  height: 1px;
+  background: #ddd;
+  width: 40%;
+  position: absolute;
+  top: 50%;
+}
+
+.unique-divider::before {
+  left: 0;
+}
+
+.unique-divider::after {
+  right: 0;
+}
+
+/* Social Buttons */
+.unique-social-login {
+  display: flex;
+  gap: 10px;
+}
+
+.unique-btn-google,
+.unique-btn-apple {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.unique-btn-google {
+  background-color: #db4437;
+}
+
+.unique-btn-google:hover {
+  background-color: #c23321;
+}
+
+.unique-btn-apple {
+  background-color: #333;
+}
+
+.unique-btn-apple:hover {
+  background-color: #222;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .mainOffer .modal-content {
+    flex-direction: column;
+  }
+
+  .unique-login-left,
+  .unique-login-right {
+    flex: none;
+    width: 100%;
+  }
+
+  .unique-login-left {
+    padding: 20px;
+  }
+
+  .unique-login-right {
+    padding: 20px;
+  }
+}
+/* Travel Features Section */
+.travel-features-container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-image: url('./images/woman-8587090_1920.png') ;
+  animation: fadeIn 1s ease-in-out;
+  border-radius: 20px;
+  
+}
+
+/* Feature Row Styling */
+.feature-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  animation: slideUp 1s ease-out;
+}
+
+/* Feature Card Item Styling */
+.feature-card-item {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.feature-card-item:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  background-color: #f0f0f0;
+}
+
+/* Image Styling */
+.feature-card-item .feature-image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Effect for Image */
+.feature-card-item:hover .feature-image {
+  transform: scale(1.1);
+}
+
+/* Title and Description Styling */
+.feature-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #333;
+  margin-top: 20px;
+  transition: color 0.3s ease;
+}
+
+.feature-description {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 10px;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+/* Hover Effect for Title and Description */
+.feature-card-item:hover .feature-title {
+  color: #007bff;
+}
+
+.feature-card-item:hover .feature-description {
+  color: #555;
+}
+
+/* Responsive Styling for Smaller Screens */
+@media (max-width: 767px) {
+  .feature-card-item .feature-title {
+      font-size: 1.5rem;
+  }
+
+  .feature-card-item .feature-description {
+      font-size: 0.875rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+      transform: translateY(20px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Custom Shadow */
+.shadow-lg {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Button Styling (if any, can be added to complete the UI) */
+.btn-custom {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 50px;
+  font-size: 1rem;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: #0056b3;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.travel-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  background: url('./images/26.jpg') no-repeat center/cover;
+  color: white;
+  height: 100vh;
+  margin: auto 10px;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.left-content {
+  max-width: 50%;
+}
+
+.left-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.left-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.booking-button {
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.booking-button:hover {
+  background: white;
+  color: black;
+  transition: 0.3s;
+}
+
+.right-content {
+  background: white;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  width: 35%;
+}
+
+.hotel-form h3 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-button {
+  width: 100%;
+  padding: 10px;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.search-button:hover {
+  background: gray;
+  transition: 0.3s;
+}
